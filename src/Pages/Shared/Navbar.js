@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Transition } from "@headlessui/react";
 import CustomLink from '../CustomLink/CustomLink';
-// import logo from '../../Assets/Images/logo.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { BsFacebook, BsTwitter, BsInstagram } from 'react-icons/bs';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -26,8 +25,8 @@ const Navbar = () => {
         localStorage.removeItem('token');
     }
     return (
-        <div className=' sticky top-0 z-50 shadow-sm'>
-            <div className="bg-gradient-to-b from-primary to-secondary hidden md:block">
+        <div className='sticky top-0 z-50 shadow-sm'>
+            <div className="bg-gradient-to-b px-5 from-primary to-secondary hidden md:block">
                 <div className="flex justify-between items-center h-12 container mx-auto">
                     <div className=" text-white text-md">
                         <p>Get Free Shipping – Free 30 Day Money Back Guarantee</p>
@@ -45,19 +44,19 @@ const Navbar = () => {
                     <div className="flex items-center justify-between md:block">
                         <div className="flex items-center">
                             <div onClick={() => navigate('/')}className="flex-shrink-0 w-fit">
-                               <h2>CarParts</h2> 
+                               <h2 className='text-4xl font-bold text-primary'>CarParts.</h2> 
                             </div>
                             <div className="hidden md:flex justify-between items-center md:ml-auto">
                                 <div className="nav-item ml-10 flex items-baseline space-x-4 text-lg">
                                     <CustomLink
                                         to="/"
-                                        className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                        className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
                                     >
                                         Home
                                     </CustomLink>
                                     <CustomLink
                                         to="/tools"
-                                        className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                        className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
                                     >
                                         Tools
                                     </CustomLink>
@@ -67,21 +66,21 @@ const Navbar = () => {
                                             <>
                                                 <CustomLink
                                                     to="/dashboard"
-                                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                                    className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
                                                 >
                                                     Dashboard
                                                 </CustomLink>
 
                                                 {/* <CustomLink
                                                     to="add-item"
-                                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                                    className="nav-btn px-3 lg:text-lg py-2 rounded-md text-sm font-medium"
                                                 >
                                                     Add Item
                                                 </CustomLink> */}
 
                                                 {/* <CustomLink
                                                     to="my-items"
-                                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                                    className="nav-btn px-3 lg:text-lg py-2 rounded-md text-sm font-medium"
                                                 >
                                                     My Items
                                                 </CustomLink> */}
@@ -91,21 +90,21 @@ const Navbar = () => {
 
                                     <CustomLink
                                         to="/blog"
-                                        className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                        className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
                                     >
                                         Blog
                                     </CustomLink>
 
                                     <CustomLink
                                         to="portfolio"
-                                        className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                        className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
                                     >
                                         Portfolio
                                     </CustomLink>
 
                                     <CustomLink
                                         to="contact-us"
-                                        className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
+                                        className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
                                     >
                                         Contact
                                     </CustomLink>
