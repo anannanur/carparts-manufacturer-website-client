@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-// import { Transition } from "@headlessui/react";
+import { Transition } from "@headlessui/react";
 import CustomLink from '../CustomLink/CustomLink';
 // import logo from '../../Assets/Images/logo.png'
 import { Link, useNavigate } from 'react-router-dom';
-// import { BsFacebook, BsTwitter, BsInstagram } from 'react-icons/bs';
+import { BsFacebook, BsTwitter, BsInstagram } from 'react-icons/bs';
 import { useAuthState } from 'react-firebase-hooks/auth';
-// import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
@@ -45,12 +44,8 @@ const Navbar = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between md:block">
                         <div className="flex items-center">
-                            <div className="flex-shrink-0 w-fit">
-                                <img onClick={() => navigate('/')}
-                                    className="cursor-pointer"
-                                    src={logo}
-                                    alt="Workflow"
-                                />
+                            <div onClick={() => navigate('/')}className="flex-shrink-0 w-fit">
+                               <h2>CarParts</h2> 
                             </div>
                             <div className="hidden md:flex justify-between items-center md:ml-auto">
                                 <div className="nav-item ml-10 flex items-baseline space-x-4 text-lg">
