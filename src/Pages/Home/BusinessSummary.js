@@ -16,7 +16,7 @@ const BusinessSummary = ({ icon, end, title, image }) => {
             <div className="card-body">
                 <h2 className="card-title md:text-7xl mx-auto text-white">{icon}</h2>
                 <div className='text-center text-5xl font-bold text-white' ref={countUpRef}></div>
-                <p className='text-center text-2xl font-medium text-white'>{title}</p>
+                <p className='text-center text-2xl font-bold text-white'>{title}</p>
             </div>
         </div>
 
