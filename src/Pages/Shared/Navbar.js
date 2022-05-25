@@ -50,13 +50,13 @@ const Navbar = () => {
                                 <div className="nav-item ml-10 flex items-baseline space-x-4 text-lg">
                                     <CustomLink
                                         to="/"
-                                        className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
+                                        className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Home
                                     </CustomLink>
                                     <CustomLink
                                         to="/tools"
-                                        className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
+                                        className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Tools
                                     </CustomLink>
@@ -66,21 +66,21 @@ const Navbar = () => {
                                             <>
                                                 <CustomLink
                                                     to="/dashboard"
-                                                    className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
+                                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                                 >
                                                     Dashboard
                                                 </CustomLink>
 
                                                 {/* <CustomLink
                                                     to="add-item"
-                                                    className="nav-btn px-3 lg:text-lg py-2 rounded-md text-sm font-medium"
+                                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                                 >
                                                     Add Item
                                                 </CustomLink> */}
 
                                                 {/* <CustomLink
                                                     to="my-items"
-                                                    className="nav-btn px-3 lg:text-lg py-2 rounded-md text-sm font-medium"
+                                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                                 >
                                                     My Items
                                                 </CustomLink> */}
@@ -90,14 +90,14 @@ const Navbar = () => {
 
                                     <CustomLink
                                         to="/blog"
-                                        className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
+                                        className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Blog
                                     </CustomLink>
 
                                     <CustomLink
                                         to="portfolio"
-                                        className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
+                                        className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Portfolio
                                     </CustomLink>
