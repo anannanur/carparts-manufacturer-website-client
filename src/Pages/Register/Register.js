@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import googleLogo from '../../Assets/Images/icons8-google.svg';
+import googleLogo from '../../images/icons8-google.svg';
 import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 import useToken from '../Hooks/useToken';
-import loderImage from '../../Assets/Images/smallLoader.gif'
+import loderImage from '../../images/smallLoader.gif'
 
 const Register = () => {
     const [createUserWithEmailAndPassword, , loading, error] = useCreateUserWithEmailAndPassword(auth);
