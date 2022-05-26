@@ -52,7 +52,7 @@ const Home = () => {
             <h1 className='text-uppercase text-center text-primary text-4xl md:text-5xl mt-20 font-semibold custom-border-primary w-fit mx-auto pb-4'>Featured Parts</h1>
             <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mt-16 mb-20'>
                 {
-                    reversedParts.slice(0, 6).map(part => <PartsCard handlePurchase={handlePurchase} part={part} ></PartsCard>)
+                    reversedParts.slice(0, 6).map(part => <PartsCard handlePurchase={handlePurchase} part={part} key={part._id} ></PartsCard>)
                 }
             </div>
 
