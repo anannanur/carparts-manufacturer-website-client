@@ -32,9 +32,9 @@ const Navbar = () => {
                         <p>Get Free Shipping – Free 30 Day Money Back Guarantee</p>
                     </div>
                     <div className="right-icon flex text-white">
-                        <Link to="https://www.facebook.com/ayon.jodder.75/"><BsFacebook className='ml-8 text-xl'></BsFacebook></Link>
-                        <Link to="https://github.com/AyonJD"><BsTwitter className='ml-8 text-xl'></BsTwitter></Link>
-                        <Link to="https://github.com/AyonJD"><BsInstagram className='ml-8 text-xl'></BsInstagram></Link>
+                        <Link to=""><BsFacebook className='ml-8 text-xl'></BsFacebook></Link>
+                        <Link to=""><BsTwitter className='ml-8 text-xl'></BsTwitter></Link>
+                        <Link to=""><BsInstagram className='ml-8 text-xl'></BsInstagram></Link>
                     </div>
                 </div>
             </div>
@@ -55,10 +55,10 @@ const Navbar = () => {
                                         Home
                                     </CustomLink>
                                     <CustomLink
-                                        to="/tools"
+                                        to="/parts"
                                         className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        Tools
+                                        Parts
                                     </CustomLink>
 
                                     {

@@ -143,9 +143,9 @@ ul li a {
 
 /* Border */
 .custom-border {
-  border-bottom: 10px double #ffffff;
+  border-bottom: 2px dotted white;
 }
 
 .custom-border-primary {
-  border-bottom: 10px double #16a085;
+  border-bottom: 2px dotted #16a085;
 }

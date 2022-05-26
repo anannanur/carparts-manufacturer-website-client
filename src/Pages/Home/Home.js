@@ -24,13 +24,10 @@ const Home = () => {
         <div>
             <Slider></Slider>
 
-            <div className='bg-gradient-to-t from-primary to-secondary'>
-                <div className="custom-shape-divider-top-1653206227">
-                    <img src={shape} alt="" />
-                </div>
-                <h1 className='text-uppercase text-center text-white text-4xl md:text-5xl font-semibold'>We are trusted</h1>
-                <h1 className='text-uppercase text-center text-white text-2xl custom-border w-fit mx-auto mt-2 pb-4'>We understand our users expectation</h1>
-                <div className="business-summery mt-10 pb-10 grid grid-cols-1 md:grid-cols-3 gap-10 container mx-auto">
+            <div className='bg-gradient-to-r from-primary to-secondary py-16'>
+                <h1 className='text-uppercase text-center text-white text-2xl md:text-5xl font-semibold'>We are Trustworthy</h1>
+                <h1 className='text-uppercase text-center text-white text-xl w-fit mx-auto mt-1 pb-4'>We can feel users Expectations</h1>
+                <div className="business-summery mt-16 pb-10 grid grid-cols-1 md:grid-cols-3 gap-10 container mx-auto">
                     <BusinessSummary
                         icon={<BiWorld></BiWorld>}
                         end={50}
@@ -52,8 +49,8 @@ const Home = () => {
                 </div>
             </div>
             {/* parts */}
-            <h1 className='text-uppercase text-center text-primary text-4xl md:text-5xl mt-20 font-semibold custom-border-primary w-fit mx-auto pb-4'>Our Letest Tools</h1>
-            <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 mb-20'>
+            <h1 className='text-uppercase text-center text-primary text-4xl md:text-5xl mt-20 font-semibold custom-border-primary w-fit mx-auto pb-4'>Featured Parts</h1>
+            <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mt-16 mb-20'>
                 {
                     reversedParts.slice(0, 6).map(part => <PartsCard handlePurchase={handlePurchase} part={part} ></PartsCard>)
                 }
