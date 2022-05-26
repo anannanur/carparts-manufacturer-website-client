@@ -1,7 +1,7 @@
 import React from 'react';
 
-const PartsCard = ({ Part, handlePurchase }) => {
-    const { image, name, availableQuantity, price, details, minOrderQuantity, _id } = Part;
+const PartsCard = ({ part, handlePurchase }) => {
+    const { image, name, availableQuantity, price, details, minOrderQuantity } = part;
 
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
@@ -12,7 +12,7 @@ const PartsCard = ({ Part, handlePurchase }) => {
                 <p>Price: ${price}</p>
                 <p>Stock: {availableQuantity}</p>
                 <div className="card-actions justify-end mb-5">
-                    <button onClick={() => handlePurchase(_id)} className="btn btn-primary w-full text-white">Purchase</button>
+                    <button className="btn btn-primary w-full text-white">Purchase</button>
                 </div>
             </div>
         </div>

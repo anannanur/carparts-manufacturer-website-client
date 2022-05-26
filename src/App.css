@@ -6,7 +6,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  /* background: #fff; */
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -30,10 +30,11 @@
   object-fit: cover;
 }
 
-/* .swiper-button-prev,
-.swiper-button-next {
-  background: rgba(0, 0, 0, 0.473);
-} */
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullet-active {
+  color: #16a085!important;
+}
 
 /* Nav */
 nav a {
@@ -146,5 +147,5 @@ ul li a {
 }
 
 .custom-border-primary {
-  border-bottom: 10px double #E73941;
+  border-bottom: 10px double #16a085;
 }

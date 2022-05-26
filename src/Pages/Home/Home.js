@@ -4,11 +4,10 @@ import Slider from './Slider';
 import { BiWorld } from 'react-icons/bi';
 import { BsPeopleFill } from 'react-icons/bs';
 import { MdOutlineComputer } from 'react-icons/md';
-import imageOne from '../../images/1.jpg'
-import imageTwo from '../../images/2.jpg'
-import imageThree from '../../images/3.jpg'
-import shape from '../../images/curveAsymmetrical.svg'
-import ToolsCard from '../ToolsCard/ToolsCard';
+import imageOne from '../../images/1.jpg';
+import imageTwo from '../../images/2.jpg';
+import imageThree from '../../images/3.jpg';
+import shape from '../../images/curveAsymmetrical.svg';
 import { useNavigate } from 'react-router-dom';
 import useParts from '../Hooks/useParts';
 import PartsCard from '../PartsCard/PartsCard';
@@ -56,7 +55,7 @@ const Home = () => {
             <h1 className='text-uppercase text-center text-primary text-4xl md:text-5xl mt-20 font-semibold custom-border-primary w-fit mx-auto pb-4'>Our Letest Tools</h1>
             <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 mb-20'>
                 {
-                    reversedParts.slice(0, 6).map(part => <PartsCard handlePurchase={handlePurchase} part={part} key={part._id}></PartsCard>)
+                    reversedParts.slice(0, 6).map(part => <PartsCard handlePurchase={handlePurchase} part={part} ></PartsCard>)
                 }
             </div>
 
