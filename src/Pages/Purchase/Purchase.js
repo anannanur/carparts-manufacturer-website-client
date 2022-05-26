@@ -3,11 +3,11 @@ import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import googleLogo from '../../Assets/Images/icons8-google.svg'
+import googleLogo from '../../images/icons8-google.svg'
 import auth from '../../firebase.init';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import useToken from '../Hooks/useToken';
-import loderImage from '../../Assets/Images/smallLoader.gif'
+import loderImage from '../../images/smallLoader.gif'
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, trigger } = useForm();
