@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import googleLogo from '../../images/icons8-google.svg'
 import auth from '../../firebase.init';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
-// import useToken from '../Hooks/useToken';
+import useToken from '../Hooks/useToken';
 import loderImage from '../../images/smallLoader.gif'
 
 const Login = () => {
@@ -23,13 +23,13 @@ const Login = () => {
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     const from = location.state?.from?.pathname || '/';
     const [email, setEmail] = useState('');
-    // const [token] = useToken(user);
+    const [token] = useToken(user);
     const [spinner, setSpinner] = useState(false)
-    // useEffect(() => {
-    //     if (token) {
-    //         navigate(from, { replace: true })
-    //     }
-    // }, [token, navigate, from])
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true })
+        }
+    }, [token, navigate, from])
     useEffect(() => {
         if (user) {
             navigate(from, { replace: true })
