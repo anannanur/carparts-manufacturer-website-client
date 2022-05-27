@@ -7,7 +7,6 @@ import { MdOutlineComputer } from 'react-icons/md';
 import imageOne from '../../images/1.jpg';
 import imageTwo from '../../images/2.jpg';
 import imageThree from '../../images/3.jpg';
-import shape from '../../images/curveAsymmetrical.svg';
 import { useNavigate } from 'react-router-dom';
 import useParts from '../Hooks/useParts';
 import PartsCard from '../PartsCard/PartsCard';
@@ -18,7 +17,7 @@ const Home = () => {
     const reversedParts = partsCopy?.reverse();
     const navigate = useNavigate()
     const handlePurchase = id => {
-        navigate(`/tools/${id}`)
+        navigate(`/parts/${id}`)
     }
     return (
         <div>
