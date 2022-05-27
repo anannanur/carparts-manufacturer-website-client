@@ -9,7 +9,7 @@ const PaymentForm = ({ myOrder }) => {
     const [success, setSuccess] = useState('');
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
-    // console.log(success, transactionId, 'sucess---tramsid');
+    
     const [clientSecret, setClientSecret] = useState('');
 
     const { _id, price, userName, email } = myOrder;

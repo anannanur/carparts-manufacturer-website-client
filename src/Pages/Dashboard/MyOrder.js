@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import auth from '../../firebase.init';
-import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import OrderCard from './OrderCard'
 import { toast } from 'react-toastify';
@@ -9,9 +8,6 @@ import Modal from './Modal';
 import Loader from '../Loader/Loader';
 const MyOrder = () => {
     const [user] = useAuthState(auth)
-    // const [orders, setOrders] = useState([])
-    //console.log(orders);
-    //const navigate = useNavigate()
     const [modal, setModal] = useState({})
 
     const email = user?.email
@@ -27,8 +23,6 @@ const MyOrder = () => {
     }
 
     const orderDelete = (id) => {
-
-
 
         fetch(`http://localhost:9000/orders/${id}`, {
             method: 'DELETE',
