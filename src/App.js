@@ -25,6 +25,7 @@ import AddParts from './Pages/Dashboard/Admin/AddParts';
 import UpdatePart from './Pages/Dashboard/Admin/UpdatePart';
 import Payment from './Pages/Dashboard/Payment';
 import RequireAdmin from './Pages/RequireAuth/RequireAdmin';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -79,6 +80,7 @@ function App() {
           <Route path="my-profile/edit-profile" element={<UpdateProfile></UpdateProfile>}></Route>
           <Route path="payment/:id" element={<Payment />}></Route>
         </Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer />
       <ToastContainer></ToastContainer>
