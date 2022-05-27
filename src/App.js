@@ -18,41 +18,70 @@ import MyOrder from './Pages/Dashboard/MyOrder';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import UpdateProfile from './Pages/Dashboard/UpdateProfile';
+import ManageParts from './Pages/Dashboard/Admin/ManageParts';
+import AllUser from './Pages/Dashboard/Admin/AllUser';
+import ManageOrder from './Pages/Dashboard/Admin/ManageOrder';
+import AddParts from './Pages/Dashboard/Admin/AddParts';
+import UpdatePart from './Pages/Dashboard/Admin/UpdatePart';
 import Payment from './Pages/Dashboard/Payment';
+import RequireAdmin from './Pages/RequireAuth/RequireAdmin';
 
 function App() {
   return (
     <div>
-     <Navbar/>
-     <Routes>
-     <Route path='/' element={<Home></Home>}></Route>
-     <Route path='/parts' element={<AllParts/>}></Route>
-     <Route path='/login' element={<Login/>}></Route>
-     <Route path='/blog' element={<Blog></Blog>}></Route>
-     <Route path='/register' element={<Register></Register>}></Route>
-     <Route path='/contact-us' element={<Contact></Contact>}></Route>
-     <Route path='/parts/:id' element={
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/parts' element={<AllParts />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/contact-us' element={<Contact></Contact>}></Route>
+        <Route path='/parts/:id' element={
           <RequireAuth>
-           <Purchase/>
+            <Purchase />
           </RequireAuth>
         }>
-    </Route>
+        </Route>
 
-    <Route path="dashboard" element={<RequireAuth>
-         <Dashboard></Dashboard>
+        <Route path="dashboard" element={<RequireAuth>
+          <Dashboard></Dashboard>
         </RequireAuth>} >
-          <Route index element={<Welcome/>}></Route>
-          <Route path='/dashboard/myorder' element={<MyOrder/>}></Route>
+          <Route index element={<Welcome />}></Route>
+          <Route path='/dashboard/myorder' element={<MyOrder />}></Route>
           <Route path="add-review" element={<AddReview></AddReview>}></Route>
-          
+          <Route path="manageParts" element={
+           <RequireAdmin>
+              <ManageParts></ManageParts>
+           </RequireAdmin>
+          }></Route>
+          <Route path="user" element={
+            <RequireAdmin>
+              <AllUser></AllUser>
+            </RequireAdmin>
+          }></Route>
+          <Route path="manageOrder" element={
+            <RequireAdmin>
+              <ManageOrder></ManageOrder>
+            </RequireAdmin>
+          }></Route>
+          <Route path="add" element={
+           <RequireAdmin>
+              <AddParts></AddParts>
+           </RequireAdmin>
+          }></Route>
+          <Route path="parts/:id" element={
+            <RequireAdmin>
+              <UpdatePart></UpdatePart>
+            </RequireAdmin>
+          }></Route>
           <Route path="my-profile" element={<MyProfile></MyProfile>}></Route>
           <Route path="my-profile/edit-profile" element={<UpdateProfile></UpdateProfile>}></Route>
-        <Route path="payment/:id" element={<Payment />}></Route>
+          <Route path="payment/:id" element={<Payment />}></Route>
         </Route>
-    
-     </Routes>
-     <Footer/>
-     <ToastContainer></ToastContainer>
+      </Routes>
+      <Footer />
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

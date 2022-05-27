@@ -29,12 +29,21 @@ export default function App() {
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <img src={slideOne} alt="" />
+               <SwiperSlide>
+                    <div className="image-slide-bgTwo flex flex-col items-center justify-center">
+                        <h1 className="text-2xl px-2 md:px-0 md:text-4xl font-bold text-white text-center mb-8">CarParts</h1>
+                        <h1 className="text-3xl px-2 md:px-0 md:text-6xl font-bold text-white text-center">Pick your needed Parts</h1>
+                        <h1 className="text-3xl px-2 md:px-0 md:text-6xl font-bold text-white text-center mt-5">for your favourite car</h1>
+                    </div>
                 </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slideTwo} alt="" />
+               <SwiperSlide>
+                    <div className="image-slide-bgTwo flex flex-col items-center justify-center">
+                        <h1 className="text-2xl px-2 md:px-0 md:text-4xl font-bold text-white text-center mb-8">CarParts</h1>
+                        <h1 className="text-3xl px-2 md:px-0 md:text-6xl font-bold text-white text-center">Here we are</h1>
+                        <h1 className="text-3xl px-2 md:px-0 md:text-6xl font-bold text-white text-center mt-5">to serve your needed car parts</h1>
+                    </div>
                 </SwiperSlide>
+                
             </Swiper>
         </>
     );

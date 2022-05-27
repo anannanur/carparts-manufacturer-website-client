@@ -33,7 +33,7 @@ const Dashboard = () => {
                             <li className='text-primary sp-style font-bold text-xl'>
                                 <Link to='/dashboard/manageOrder'>Manage-Order </Link></li>
                             <li className='text-primary sp-style font-bold text-xl'>
-                                <Link to='/dashboard/manageTools'>Manage-Tools </Link></li>
+                                <Link to='/dashboard/manageParts'>Manage-Parts</Link></li>
                             <li className='text-primary sp-style font-bold text-xl'><Link to='/dashboard/add'>Add Products </Link></li>
 
 

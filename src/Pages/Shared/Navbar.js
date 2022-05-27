@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { Transition } from "@headlessui/react";
 import CustomLink from '../CustomLink/CustomLink';
-import { Link, useNavigate } from 'react-router-dom';
-import { BsFacebook, BsTwitter, BsInstagram } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 import { signOut } from 'firebase/auth';
-import auth from '../../firebase.init';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const user = useAuthState(auth);
-    // console.log(user);
+    const user = useAuthState(auth)
+    // console.log(user[0]?.displayName);
     const navigate = useNavigate();
     //Signout------->
     const handleSignOut = () => {
@@ -25,26 +24,16 @@ const Navbar = () => {
         localStorage.removeItem('token');
     }
     return (
-        <div className='sticky top-0 z-50 shadow-sm'>
-            <div className="bg-gradient-to-b px-5 from-primary to-secondary hidden md:block">
-                <div className="flex justify-between items-center h-12 container mx-auto">
-                    <div className=" text-white text-md">
-                        <p>Get Free Shipping – Free 30 Day Money Back Guarantee</p>
-                    </div>
-                    <div className="right-icon flex text-white">
-                        <Link to=""><BsFacebook className='ml-8 text-xl'></BsFacebook></Link>
-                        <Link to=""><BsTwitter className='ml-8 text-xl'></BsTwitter></Link>
-                        <Link to=""><BsInstagram className='ml-8 text-xl'></BsInstagram></Link>
-                    </div>
-                </div>
-            </div>
-
+        <div className=' sticky top-0 z-50 shadow-sm'>
             <nav className="bg-[#F5F5F5] py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between md:block">
                         <div className="flex items-center">
-                            <div onClick={() => navigate('/')}className="flex-shrink-0 w-fit">
-                               <h2 className='text-4xl font-bold text-primary'>CarParts.</h2> 
+                            <div className="flex-shrink-0 w-fit">
+                                <h1 onClick={() => navigate('/')}
+                                    className="cursor-pointer text-primary text-xl md:text-3xl font-bold">
+                                   CarParts.
+                                </h1>
                             </div>
                             <div className="hidden md:flex justify-between items-center md:ml-auto">
                                 <div className="nav-item ml-10 flex items-baseline space-x-4 text-lg">
@@ -70,20 +59,6 @@ const Navbar = () => {
                                                 >
                                                     Dashboard
                                                 </CustomLink>
-
-                                                {/* <CustomLink
-                                                    to="add-item"
-                                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
-                                                >
-                                                    Add Item
-                                                </CustomLink> */}
-
-                                                {/* <CustomLink
-                                                    to="my-items"
-                                                    className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
-                                                >
-                                                    My Items
-                                                </CustomLink> */}
                                             </>
                                         )
                                     }
@@ -104,13 +79,16 @@ const Navbar = () => {
 
                                     <CustomLink
                                         to="contact-us"
-                                        className="nav-btn px-3 py-2 lg:text-lg rounded-md text-sm font-medium"
+                                        className="nav-btn px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Contact
                                     </CustomLink>
                                 </div>
                                 {
-                                    user[0] ? <button onClick={handleSignOut} className='md:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms font-medium hover:font-medium px-5 py-1 rounded-md'>Logout</button> : <button onClick={() => navigate('/login')} className='md:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary  transition-all transition-duration:150ms font-medium hover:font-medium px-5 py-1 rounded-md'>Login</button>
+                                    user[0]?.displayName && <h1 className='cursor-pointer text-xl font-bold border border-primary rounded-sm text-primary px-1' onClick={() => navigate(`dashboard/my-profile`)}>{user[0]?.displayName.split(' ')[0]}</h1>
+                                }
+                                {
+                                    user[0] ? <button onClick={handleSignOut} className='md:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium px-5 py-1 rounded-md'>Logout</button> : <button onClick={() => navigate('/login')} className='md:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium  px-5 py-1 rounded-md'>Login</button>
                                 }
                             </div>
                         </div>
@@ -183,10 +161,10 @@ const Navbar = () => {
                                     Home
                                 </CustomLink>
                                 <CustomLink
-                                    to="/tools"
+                                    to="/parts"
                                     className="hover:bg-gray-700 hover:text-white text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
-                                    Tools
+                                    Parts
                                 </CustomLink>
 
                                 {
@@ -198,20 +176,6 @@ const Navbar = () => {
                                             >
                                                 Dashboard
                                             </CustomLink>
-
-                                            {/* <CustomLink
-                                                to="/add-item"
-                                                className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                            >
-                                                Add Item
-                                            </CustomLink> */}
-
-                                            {/* <CustomLink
-                                                to="/my-items"
-                                                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                            >
-                                                My Items
-                                            </CustomLink> */}
                                         </>
                                     )
                                 }
@@ -224,7 +188,7 @@ const Navbar = () => {
                                 </CustomLink>
 
                                 <CustomLink
-                                    to="portfolio"
+                                    to="/portfolio"
                                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
                                     Portfolio

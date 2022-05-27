@@ -26,7 +26,7 @@ const Payment = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 mt-10'>
             <div className="card w-50 max-w-md bg-base-100 shadow-xl my-12">
                 <div className="card-body">
-                    <p className="text-amber-700 font-bold text-4xl sp-style">Hey, {myOrder.userName
+                    <p className="text-amber-700 font-bold text-4xl sp-style">Hey, {myOrder.displayName
                     }</p>
                     <h2 className="sp-style text-2xl ">
                         Please Pay for purchasing :- <span className="text-blue-700"> {myOrder.productName}</span>
