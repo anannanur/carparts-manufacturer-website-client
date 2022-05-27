@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import unknownAvatar from '../../Assets/Images/unknown.jpg'
+import unknownAvatar from '../../images/unknown.jpg';
 import Loader from '../Loader/Loader';
 
 const ProfileCard = ({ singleUser }) => {
