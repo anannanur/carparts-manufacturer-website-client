@@ -12,6 +12,13 @@ import Navbar from './Pages/Shared/Navbar';
 import Purchase from './Pages/Purchase/Purchase';
 import Blog from './Pages/Blog/Blog';
 import Contact from './Pages/Contact/Contact';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import Welcome from './Pages/Dashboard/Welcome';
+import MyOrder from './Pages/Dashboard/MyOrder';
+import AddReview from './Pages/Dashboard/AddReview';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import UpdateProfile from './Pages/Dashboard/UpdateProfile';
+import Payment from './Pages/Dashboard/Payment';
 
 function App() {
   return (
@@ -30,6 +37,18 @@ function App() {
           </RequireAuth>
         }>
     </Route>
+
+    <Route path="dashboard" element={<RequireAuth>
+         <Dashboard></Dashboard>
+        </RequireAuth>} >
+          <Route index element={<Welcome/>}></Route>
+          <Route path='/dashboard/myorder' element={<MyOrder/>}></Route>
+          <Route path="add-review" element={<AddReview></AddReview>}></Route>
+          
+          <Route path="my-profile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="my-profile/edit-profile" element={<UpdateProfile></UpdateProfile>}></Route>
+        <Route path="payment/:id" element={<Payment />}></Route>
+        </Route>
     
      </Routes>
      <Footer/>
