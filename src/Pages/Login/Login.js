@@ -95,7 +95,7 @@ const Login = () => {
                     <label htmlFor="floating_email" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
                 </div>
                 <div className="relative z-0 mb-6 w-full group">
-                    <input type="password" name="floating_password" id="floating_password" className="block py-2 px-0 w-full text-sm text-white outline-0 bg-transparent border-0 border-b-2 border-gray-300 appearance-none" placeholder=" " required=""
+                    <input type="password" name="floating_password" id="floating_password" className="block py-2 px-0 w-full text-sm  outline-0 bg-transparent border-0 border-b-2 border-gray-300 appearance-none" placeholder=" " required=""
                         {...register('password', {
                             required: 'Password is required'
                         })}
@@ -105,7 +105,7 @@ const Login = () => {
                     />
                     <p className='text-red-500 text-sm'>{errors?.password?.message}</p>
 
-                    <label htmlFor="floating_password" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+                    <label htmlFor="floating_password" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-1 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
                 </div>
 
 
