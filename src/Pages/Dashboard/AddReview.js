@@ -33,14 +33,14 @@ const AddReview = () => {
     }
     return (
         <div className='text-center mt-10 md:mt-0'>
-            <h1>Please leave a review</h1>
+            <h1 className='text-green-600'>Please add a review</h1>
             <StarRating setCustomRating={setCustomRating}></StarRating>
             <form onSubmit={handleSubmit(onSubmitReview)}>
                 <textarea className="textarea textarea-bordered w-4/5 md:w-1/2" placeholder="Your Review"
                     {...register("review", { required: true })}
                 ></textarea>
                 <div className='text-center'>
-                    <input type="submit" className='btn btn-outline btn-primary mx-auto w-32 ' />
+                    <input type="submit" className='btn mt-5 text-white btn-primary mx-auto w-32 ' />
                 </div>
             </form>
         </div>

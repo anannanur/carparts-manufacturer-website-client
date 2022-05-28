@@ -40,7 +40,7 @@ const ManageOrder = () => {
 
     return (
         <div>
-            {allorders?.length ? <h1 className='font-bold text-2xl sp-style text-blue-900 mt-10'>Here is the {allorders?.length} {allorders?.length === 1 ? 'order' : 'orders'}:-</h1> : <h1 className='font-bold text-2xl sp-style text-red-900 mt-10'>There is no Order</h1>}
+            {allorders?.length ? <h1 className='font-bold text-2xl sp-style text-green-600 mt-10'>Here is the {allorders?.length} {allorders?.length === 1 ? 'order' : 'orders'}:-</h1> : <h1 className='font-bold text-2xl sp-style text-red-900 mt-10'>There is no Order</h1>}
 
 
 

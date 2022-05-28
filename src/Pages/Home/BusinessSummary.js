@@ -1,7 +1,7 @@
 import React from 'react';
 import CountUp, { useCountUp } from 'react-countup';
 
-const BusinessSummary = ({ icon, end, title, image }) => {
+const BusinessSummary = ({ icon, end, title }) => {
     const countUpRef = React.useRef(null);
     const { start, pauseResume, reset, update } = useCountUp({
         ref: countUpRef,
@@ -11,12 +11,11 @@ const BusinessSummary = ({ icon, end, title, image }) => {
 
     });
     return (
-        <div className="card w-96 bg-base-200 image-full mx-auto">
-            <figure><img src={image} alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title md:text-7xl mx-auto text-white">{icon}</h2>
-                <div className='text-center text-5xl font-bold text-white' ref={countUpRef}></div>
-                <p className='text-center text-2xl font-bold text-white'>{title}</p>
+        <div className="card w-96 bg-white image-full mx-auto">
+            <div className="card-body bg-white">
+                <h2 className="card-title md:text-7xl mx-auto text-primary">{icon}</h2>
+                <div className='text-center text-5xl font-bold text-primary' ref={countUpRef}></div>
+                <p className='text-center text-2xl font-bold text-primary'>{title}</p>
             </div>
         </div>
 

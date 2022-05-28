@@ -85,16 +85,19 @@ const Navbar = () => {
                                     </CustomLink>
                                 </div>
                                 {
-                                    user[0]?.displayName && <h1 className='cursor-pointer text-xl font-bold border border-primary rounded-sm text-primary px-1' onClick={() => navigate(`dashboard/my-profile`)}>{user[0]?.displayName.split(' ')[0]}</h1>
+                                    user[0]?.displayName && <h1 className='cursor-pointer text-xl font-bold border border-primary md:ml-4 text-primary px-1' onClick={() => navigate(`dashboard/my-profile`)}>{user[0]?.displayName.split(' ')[0]}</h1>
                                 }
                                 {
                                     user[0] ? <button onClick={handleSignOut} className='md:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium px-5 py-1 rounded-md'>Logout</button> : <button onClick={() => navigate('/login')} className='md:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium  px-5 py-1 rounded-md'>Login</button>
                                 }
                             </div>
                         </div>
-                        <div className="-mr-2 flex md:hidden">
+                        <div className="mr-2 flex md:hidden">
                             {
                                 user[0] ? <button onClick={handleSignOut} className='md:ml-24 text-sm md:hidden block text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms font-medium hover:font-medium px-3 py-1 rounded-md'>Logout</button> : <button onClick={() => navigate('/login')} className='md:ml-24 text-sm md:hidden block text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms font-medium hover:font-medium px-3 py-1 rounded-md'>Login</button>
+                            }
+                            {
+                                    user[0]?.displayName && <h1 className='cursor-pointer text-xl font-bold border border-primary ml-2 text-primary px-1' onClick={() => navigate(`dashboard/my-profile`)}>{user[0]?.displayName.split(' ')[0]}</h1>
                             }
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
@@ -137,7 +140,10 @@ const Navbar = () => {
                                         />
                                     </svg>
                                 )}
+                                
+                                  
                             </button>
+                            
                         </div>
                     </div>
                 </div>

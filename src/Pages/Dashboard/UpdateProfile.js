@@ -233,7 +233,7 @@ const UpdateProfile = () => {
                         </label>
                     </div>
 
-                    <input className='text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms md:w-1/4 font-medium hover:font-medium px-5 py-2 rounded-md cursor-pointer' type="submit" value="Update" />
+                    <input className='text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary md:w-1/4 font-medium px-5 py-2 mb-8 rounded-md cursor-pointer' type="submit" value="Update" />
                 </form>
             </div>
         </>

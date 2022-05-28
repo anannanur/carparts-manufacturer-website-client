@@ -144,7 +144,7 @@ const UpdatePart = () => {
                         </label>
                         <input
                             type="number"
-                            placeholder="availableQuantity"
+                            placeholder="minOrderQuantity"
                             className="input input-bordered w-full max-w-xs"
                             {...register("minOrderQuantity", {
                                 required: {
@@ -196,7 +196,7 @@ const UpdatePart = () => {
                         </label>
                     </div>
 
-                    <input className='btn w-full max-w-xs text-white bg-cyan-700' type="submit" value="Update" />
+                    <input className='btn w-full max-w-xs text-white bg-primary' type="submit" value="Update" />
                 </form>
             </div>
         </>

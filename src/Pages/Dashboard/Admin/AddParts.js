@@ -126,7 +126,7 @@ const AddParts = () => {
                     </label>
                     <input
                         type="number"
-                        placeholder="availableQuantity"
+                        placeholder="minOrderQuantity"
                         className="input input-bordered w-full"
                         {...register("minOrderQuantity", {
                             required: {

@@ -73,11 +73,11 @@ const Login = () => {
         </div>
     }
     return (
-        <div className='md:mt-12 mb-10 w-full md:w-1/2 mx-auto custom-shadow bg-[#e8eaec] pt-10 pb-10 px-10 rounded-lg'>
-            <h1 className='text-2xl md:text-3xl font-medium text-slate-500 text-center mb-10'>Please Login to Continue</h1>
+        <div className='md:mt-12 mb-10 w-full md:w-1/2 mx-auto custom-shadow bg-[#E8F0FE] pt-10 pb-10 px-10 rounded-lg'>
+            <h1 className='text-2xl md:text-3xl text-primary font-medium text-center mb-10'>Please Login to Continue</h1>
             <form onSubmit={handleSubmit(onSubmitParam)}>
                 <div className="relative z-0 mb-6 w-full group">
-                    <input type="email" name="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
+                    <input type="email" name="floating_email" className="block py-2 px-0 w-full text-sm  outline-0 bg-transparent border-0 border-b-2 border-gray-300 appearance-none " placeholder=" " required=""
                         {...register("email", {
                             required: 'Email is required',
                             pattern: {
@@ -92,10 +92,10 @@ const Login = () => {
                     />
                     <p className='text-red-500 text-sm'>{errors?.email?.message}</p>
 
-                    <label htmlFor="floating_email" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+                    <label htmlFor="floating_email" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
                 </div>
                 <div className="relative z-0 mb-6 w-full group">
-                    <input type="password" name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
+                    <input type="password" name="floating_password" id="floating_password" className="block py-2 px-0 w-full text-sm text-white outline-0 bg-transparent border-0 border-b-2 border-gray-300 appearance-none" placeholder=" " required=""
                         {...register('password', {
                             required: 'Password is required'
                         })}
@@ -110,11 +110,11 @@ const Login = () => {
 
 
                 {
-                    loader ? loader : <button type="submit" className="text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms md:w-1/4 font-medium hover:font-medium px-5 py-2 rounded-md">Login</button>
+                    loader ? loader : <button type="submit" className="text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary  px-5 py-2 rounded-md">Login</button>
                 }
                 <div className="flex flex-col">
-                    <p className='text-sm md:text-base font-medium mt-5 text-slate-600'>New in Company Name? <Link className='text-blue-700 underline' to={'/register'}>Join Now</Link></p>
-                    <p className='text-sm md:text-base font-medium text-slate-600 mt-2'>Forgot password? <Link onClick={handleResetPassword} className='text-blue-700 underline' to={'/login'}>Reset password</Link></p>
+                    <p className='text-sm md:text-base font-medium mt-5 text-slate-600'>New in CarParts? <Link className='text-blue-500' to={'/register'}>Join Now</Link></p>
+                    <p className='text-sm md:text-base font-medium text-slate-600 mt-2'>Forgot password? <Link onClick={handleResetPassword} className='text-blue-500' to={'/login'}>Reset password</Link></p>
                 </div>
 
             </form>

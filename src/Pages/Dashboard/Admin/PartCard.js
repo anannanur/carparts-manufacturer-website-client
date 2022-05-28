@@ -26,7 +26,7 @@ const PartCard = ({ o, index, sendEvent, refetch, setModal }) => {
 
             </td>
             <td>
-                <label onClick={() => setModal(o)} htmlFor="deleteModal" className="bg-primary btn modal-button">Delete</label></td>
+                <label onClick={() => setModal(o)} htmlFor="deleteModal" className="bg-red-700 text-white btn modal-button rounded-md">Delete</label></td>
             <td> <button onClick={() => navigate(`/dashboard/parts/${_id}`)} className="text-white bg-green-600  font-medium hover:font-medium px-5 py-[10px] rounded-md ml-2">Update</button></td>
         </tr>
     );

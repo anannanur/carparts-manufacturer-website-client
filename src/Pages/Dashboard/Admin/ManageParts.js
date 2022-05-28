@@ -42,7 +42,7 @@ const ManageParts = () => {
 
     return (
         <div>
-            {allParts?.length ? <h1 className='font-bold text-2xl sp-style text-blue-900 mt-10'>Here is the {allParts?.length} {allParts?.length === 1 ? 'Tool' : 'Tools'}:-</h1> : <h1 className='font-bold text-2xl sp-style text-red-900 mt-10'>There is no Parts.Add Some Parts</h1>}
+            {allParts?.length ? <h1 className='font-bold text-2xl sp-style text-green-600 mt-10'>Here is the {allParts?.length} {allParts?.length === 1 ? 'Part' : 'Parts'}:-</h1> : <h1 className='font-bold text-2xl sp-style text-red-700 mt-10'>No part here. Add Some Parts</h1>}
 
             {
                 modal?._id && <Modal

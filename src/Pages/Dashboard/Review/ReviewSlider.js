@@ -25,7 +25,8 @@ export default function App() {
     }, [])
     // console.log(reviewes);
     return (
-        <>
+        <div className="bg-primary pb-32 pt-20">
+            <h1 className="text-center text-white mb-16 md:text-5xl font-semibold text-2xl">Customer Reviews</h1>
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
@@ -46,6 +47,6 @@ export default function App() {
                 }
 
             </Swiper>
-        </>
+        </div>
     );
 }

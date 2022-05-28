@@ -47,7 +47,7 @@ ul li a {
 
 /* My Profle  */
 .profile-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(20, 170, 132,.3);
   max-width: 300px;
   margin: auto;
   text-align: center;
@@ -58,28 +58,10 @@ ul li a {
   font-size: 18px;
 }
 
-.profile-card button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
 .profile-card a {
   text-decoration: none;
   font-size: 22px;
-  color: black;
-}
-
-.profile-card button:hover,
-.profile-card a:hover {
-  opacity: 0.7;
+  color: rgba(20, 170, 132);
 }
 
 /* Rating icon */
@@ -91,55 +73,12 @@ ul li a {
   color: rgb(173, 173, 173);
 }
 
-/* Auto Typer */
-.auto-type span {
-  font-size: 50px;
-  font-weight: 700;
-}
-
-@media only screen and (max-width: 600px) {
-  .auto-type span {
-      font-size: 30px;
-  }
-
-}
-
-.auto-type p {
-  line-height: 1.7;
-  word-spacing: 1px;
-}
-
-/* Portfolio width */
-.custom-width {
-  width: 130%;
-}
 
 @media only screen and (max-width: 600px) {
   .custom-width {
       width: 100%;
   }
 
-}
-
-
-/* Not found */
-.error {
-  animation: animate 1s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-      color: red;
-      opacity: 1;
-  }
-
-  50% {
-      opacity: .5;
-  }
-
-  100% {
-      opacity: 0;
-  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -156,9 +95,6 @@ ul li a {
   height: calc(100vh - 146px);
 }
 
-/* .img-height {
-  max-height: 100% !important;
-} */
 
 .image-slide-bgOne {
   /* background-image: url(./Assets/Images/slide1.jpg); */
@@ -177,16 +113,6 @@ ul li a {
   background-repeat: no-repeat;
   height: calc(100vh - 146px);
 }
-
-.image-slide-bgThree {
-  /* background-image: url(./Assets/Images/slide3.jpg); */
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(./images/slide2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: calc(100vh - 146px);
-}
-
 
 /* Accordion---------Home page */
 

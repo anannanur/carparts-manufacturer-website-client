@@ -14,8 +14,7 @@ const Contact = ({ children }) => {
                                 {children ? children : 'Contact Us'}
                             </h1>
                             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                                Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-                                gentrify.
+                                Get In Touch
                             </p>
                         </div>
 
@@ -67,16 +66,16 @@ const Contact = ({ children }) => {
                                 </div>
                             </div>
                             <div className="p-2 w-full">
-                                <button className="flex mx-auto tmd:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms font-medium hover:font-medium px-8 py-2 rounded-md">
+                                <button className="flex mx-auto tmd:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary  px-8 py-2 rounded-md">
                                     Send
                                 </button>
                             </div>
                             <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                                <a className="text-primary">programminghero@email.com</a>
+                                <a className="text-primary">carparts@email.com</a>
                                 <p className="leading-normal my-5">
-                                    49 Smith St.
+                                    49 Tejgaon.
                                     <br />
-                                    Saint Cloud, MN 56301
+                                    Dhaka, Bangladesh
                                 </p>
                                 <span className="inline-flex">
                                     <a className="text-gray-500">

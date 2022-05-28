@@ -12,9 +12,9 @@ const Portfolio = () => {
                     <p>Email Address: anannaanu974@gmail.com</p>
                     <p>Education Background: CSE 1st year</p>
                     <p>Tech Stack I know : Reactjs, Javascript, HTML, CSS, Mongodb, Bootstrap, Tailwind css, git and github</p>
-                    <p>My 3 projects Link: 1. <Link to="https://perfume-inventory-system.web.app/ ">Perfume Inventory System</Link></p>
-                    <p>2. <Link to="https://independent-service-prov-77fa5.web.app/ ">Independent Service Provider</Link></p>
-                    <p>3. <Link to="https://lamp-light-analysis.netlify.app/ ">Lamp Light Analysis</Link></p>                      
+                    <p>My 3 projects Link: 1. <a href="https://perfume-inventory-system.web.app/" target="_blank">Perfume Inventory System</a></p>
+                    <p>2. <a href="https://independent-service-prov-77fa5.web.app/" target="_blank">Independent Service Provider</a></p>
+                    <p>3. <a href="https://lamp-light-analysis.netlify.app/" target="_blank">Lamp Light Analysis</a></p>                      
                 </div>
             </div>
         </div>

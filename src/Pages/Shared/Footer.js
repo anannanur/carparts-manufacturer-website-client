@@ -16,13 +16,13 @@ const Footer = () => {
                                 user && (
                                     <>
                                         <li className="mb-4">
-                                            <Link to="/inventory" className=" hover:underline">Inventory</Link>
+                                            <Link to="/parts" className=" hover:underline">Parts</Link>
                                         </li>
                                         <li className="mb-4">
-                                            <Link to="/add-item" className="hover:underline">Add Item</Link>
+                                            <Link to="/dashboard/add-review" className="hover:underline">Add Review</Link>
                                         </li>
                                         <li className="mb-4">
-                                            <Link to="/my-item" className="hover:underline">My Item</Link>
+                                            <Link to="/dashboard/myorder" className="hover:underline">My Order</Link>
                                         </li>
                                     </>
                                 )
@@ -31,7 +31,7 @@ const Footer = () => {
                                 <Link to="/blog" className="hover:underline">Blog</Link>
                             </li>
                             <li className="mb-4">
-                                <Link to="/contact" className="hover:underline">Contact</Link>
+                                <Link to="/contact-us" className="hover:underline">Contact</Link>
                             </li>
                         </ul>
                     </div>

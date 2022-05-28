@@ -18,9 +18,11 @@ const ProfileCard = ({ singleUser }) => {
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
             />
             <div className="card profile-card">
+                <div style={{margin:'auto'}}>
                 {
-                    photoURL ? <img src={photoURL} alt="John" style={{ width: "100%" }} /> : <img src={unknownAvatar} alt="John" style={{ width: "100%" }} />
+                    photoURL ? <img src={photoURL} alt="John" className="my-5" style={{ width: "100%", borderRadius: '50%' }} /> : <img src={unknownAvatar} alt="John" />
                 }
+                </div>
                 <h1>Name: {displayName}</h1>
                 <h1>Email: {email}</h1>
                 <h1>Institute: {
@@ -50,7 +52,7 @@ const ProfileCard = ({ singleUser }) => {
                     </Link>
                 </div>
                 <p>
-                    <button onClick={() => navigate(`/dashboard/my-profile/edit-profile`)}>Update Profile</button>
+                    <button className="btn btn-primary text-white mt-5 mb-5" onClick={() => navigate(`/dashboard/my-profile/edit-profile`)}>Update Profile</button>
                 </p>
             </div>
         </>
