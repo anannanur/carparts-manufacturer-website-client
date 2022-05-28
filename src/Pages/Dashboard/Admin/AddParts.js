@@ -30,7 +30,7 @@ const AddParts = () => {
                         image: img
                     }
                     //send data to db
-                    fetch(`http://localhost:5000/parts`, {
+                    fetch(`https://vast-journey-16295.herokuapp.com/parts`, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -16,7 +16,7 @@ const AddReview = () => {
             review: data.review,
             user
         }
-        fetch('http://localhost:5000/reviews/', {
+        fetch('https://vast-journey-16295.herokuapp.com/reviews/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

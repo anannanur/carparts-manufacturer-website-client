@@ -7,7 +7,7 @@ import Loader from '../../Loader/Loader';
 
 const ManageParts = () => {
     const [modal, setModal] = useState({})
-    const { data: allParts, isLoading, refetch } = useQuery('allParts', () => fetch(`http://localhost:5000/parts`, {
+    const { data: allParts, isLoading, refetch } = useQuery('allParts', () => fetch(`https://vast-journey-16295.herokuapp.com/parts`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -21,7 +21,7 @@ const ManageParts = () => {
     const partsDelete = (id) => {
 
 
-        fetch(`http://localhost:5000/parts/${id}`, {
+        fetch(`https://vast-journey-16295.herokuapp.com/parts/${id}`, {
             method: 'DELETE',
             headers: {
                 "content-type": "application/json",

@@ -10,7 +10,7 @@ import PaymentForm from './PaymentForm';
 const stripePromise = loadStripe('pk_test_51L3SSCIDOBqAGASqEccESXGJMO9rhktg5oGlg30t6HWvxIwi4cuul4dpJ88TgE10cUWDKx8dpiPvnJjwvc77W6m600NYkTnE9R');
 const Payment = () => {
     const { id } = useParams()
-    const url = `http://localhost:5000/payment/${id}`
+    const url = `https://vast-journey-16295.herokuapp.com/payment/${id}`
     const { data: myOrder, refetch, isLoading } = useQuery(['myOrder', id], () => fetch(url, {
         method: 'GET',
         headers: {
