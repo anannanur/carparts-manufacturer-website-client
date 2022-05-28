@@ -101,6 +101,7 @@ const Purchase = () => {
                 <p>{details}</p>
                 <p>Price: ${price}</p>
                 <p>Stock: {availableQuantity}</p>
+                <p>Minimum order: {minOrderQuantity}</p>
                 <form onSubmit={handleQuantity}>
                     <input type="text" placeholder="Quantity" name='quantity' className="input input-bordered input-secondary w-full max-w-xs"
                         required=""
