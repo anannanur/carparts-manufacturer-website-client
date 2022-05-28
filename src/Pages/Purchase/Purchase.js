@@ -16,7 +16,7 @@ const Purchase = () => {
     const [userInputData, setuserInputData] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:9000/parts/${id}`)
+        fetch(`http://localhost:5000/parts/${id}`)
             .then(res => res.json())
             .then(data => setPart(data))
     }, [id, part])
@@ -61,7 +61,7 @@ const Purchase = () => {
         } else {
             const newQuantity = parseInt(availableQuantity) - parseInt(quantity)
             const newQuantityObj = { newQuantity }
-            fetch(`http://localhost:9000/parts/${id}`, {
+            fetch(`http://localhost:5000/parts/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -76,7 +76,7 @@ const Purchase = () => {
                 })
 
             //post order to database
-            fetch('http://localhost:9000/orders', {
+            fetch('http://localhost:5000/orders', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

@@ -36,7 +36,7 @@ const UpdatePart = () => {
                         image: img
                     }
                     //send data to db
-                    fetch(`http://localhost:9000/parts/${id}`, {
+                    fetch(`http://localhost:5000/parts/${id}`, {
                         method: 'PATCH',
                         headers: {
                             'content-type': 'application/json',

@@ -19,7 +19,7 @@ const MyProfile = () => {
     // useEffect(() => {
     const getItems = async () => {
         const email = signedUser?.email
-        const url = `http://localhost:9000/user/${email}`
+        const url = `http://localhost:5000/user/${email}`
         // console.log(url);
         try {
             const { data } = await axios.get(url, {

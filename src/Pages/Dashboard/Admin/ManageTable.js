@@ -14,7 +14,7 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal }) => {
 
     const [user] = useAuthState(auth)
     const makeShip = () => {
-        fetch(`http://localhost:9000/ship/${_id}`, {
+        fetch(`http://localhost:5000/ship/${_id}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`

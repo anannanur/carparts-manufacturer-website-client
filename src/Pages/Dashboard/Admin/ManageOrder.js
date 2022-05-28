@@ -6,7 +6,7 @@ import Modal from '../Modal'
 import Loader from '../../Loader/Loader';
 const ManageOrder = () => {
     const [modal, setModal] = useState({})
-    const { data: allorders, isLoading, refetch } = useQuery('allorders', () => fetch(`http://localhost:9000/orders`, {
+    const { data: allorders, isLoading, refetch } = useQuery('allorders', () => fetch(`http://localhost:5000/orders`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -19,7 +19,7 @@ const ManageOrder = () => {
     const orderDelete = (id) => {
 
 
-        fetch(`http://localhost:9000/order/${id}`, {
+        fetch(`http://localhost:5000/order/${id}`, {
             method: 'DELETE',
             headers: {
                 "content-type": "application/json",

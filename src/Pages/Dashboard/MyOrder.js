@@ -11,7 +11,7 @@ const MyOrder = () => {
     const [modal, setModal] = useState({})
 
     const email = user?.email
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:9000/orders/${email}`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/orders/${email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -24,7 +24,7 @@ const MyOrder = () => {
 
     const orderDelete = (id) => {
 
-        fetch(`http://localhost:9000/orders/${id}`, {
+        fetch(`http://localhost:5000/orders/${id}`, {
             method: 'DELETE',
             headers: {
                 "content-type": "application/json",

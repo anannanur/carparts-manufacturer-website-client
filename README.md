@@ -22,7 +22,7 @@ Both admin and user can update their profile on my profile page.
 * Both user and admin update their profile
 
 
-## Tools are using in front:
+## Tools are using in front-end:
 * React Js
 * Axios
 * React font-awesome
@@ -39,10 +39,11 @@ Both admin and user can update their profile on my profile page.
 * React Query
 
 
-## Tools using in Back:
+## Tools using in Back-end:
 * MongoDB
 * NodeMon
 * Body-Parser
 * Cors
 * Dotenv
 * Stripe
+* jsonwebtoken

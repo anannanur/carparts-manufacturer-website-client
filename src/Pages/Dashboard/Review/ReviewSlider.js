@@ -17,7 +17,7 @@ export default function App() {
     const reviewesCopy = [...reviewes];
     const reversedReviewes = reviewesCopy?.reverse();
     useEffect(() => {
-        fetch("http://localhost:9000/reviews/")
+        fetch("http://localhost:5000/reviews/")
             .then(res => res.json())
             .then(res => {
                 setReviewes(res);

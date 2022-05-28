@@ -16,7 +16,7 @@ const AddReview = () => {
             review: data.review,
             user
         }
-        fetch('http://localhost:9000/reviews/', {
+        fetch('http://localhost:5000/reviews/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
