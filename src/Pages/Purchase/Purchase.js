@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import PurchaseForm from './PurchaseForm';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 
 const Purchase = () => {
     const { id } = useParams();
@@ -25,9 +26,9 @@ const Purchase = () => {
         e.preventDefault();
         const inputQuantity = e.target.quantity.value;
         if (inputQuantity > availableQuantity) {
-            alert('We dont have enough quantity');
+            toast.error('We dont have enough quantity');
         } else if (inputQuantity < minOrderQuantity) {
-            alert(`Minimum order quantity is ${minOrderQuantity}`);
+            toast.error(`Minimum order quantity is ${minOrderQuantity}`);
         } else {
 
             setQuantity(inputQuantity)
@@ -56,7 +57,7 @@ const Purchase = () => {
 
         //post quantity to database
         if (!quantity) {
-            alert("Quantity field can't be empty.");
+            toast.error("Quantity field can't be empty.");
         } else {
             const newQuantity = parseInt(availableQuantity) - parseInt(quantity)
             const newQuantityObj = { newQuantity }
@@ -70,7 +71,7 @@ const Purchase = () => {
                 .then(res => res.json())
                 .then(data => {
 
-                    alert('Purchase Successful')
+                    toast.success('Purchase Successful')
                     e.target.reset()
                 })
 
@@ -104,7 +105,7 @@ const Purchase = () => {
                     <input type="text" placeholder="Quantity" name='quantity' className="input input-bordered input-secondary w-full max-w-xs"
                         required=""
                     />
-                    <button type='submit' className=" text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms font-medium hover:font-medium px-5 py-[10px] rounded-md ml-2">Proceed</button>
+                    <button type='submit' className=" text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium  px-5 py-[10px] rounded-md ml-2">Proceed</button>
                 </form>
             </div>
 

@@ -12,7 +12,7 @@ const PartsCard = ({ part, handlePurchase }) => {
                 <p>Price: ${price}</p>
                 <p>Stock: {availableQuantity}</p>
                 <div className="card-actions justify-end mb-5">
-                    <button onClick={() => handlePurchase(_id)} className="btn btn-primary w-full text-white">Purchase</button>
+                    <button onClick={() => handlePurchase(_id)} className="btn btn-primary w-full text-white">Purchase it</button>
                 </div>
             </div>
         </div>

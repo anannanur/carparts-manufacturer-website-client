@@ -6,7 +6,7 @@ const Contact = ({ children }) => {
     return (
         <div>
             <section className="text-gray-700 body-font relative">
-                <div className="container px-5 py-24 mx-auto">
+                <div className="container px-5 pb-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-12">
 
                         <div className='custom-border-primary w-fit mx-auto pb-4'>

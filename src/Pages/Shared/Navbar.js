@@ -32,7 +32,7 @@ const Navbar = () => {
                             <div className="flex-shrink-0 w-fit">
                                 <h1 onClick={() => navigate('/')}
                                     className="cursor-pointer text-primary text-xl md:text-3xl font-bold">
-                                   CarParts.
+                                    CarParts.
                                 </h1>
                             </div>
                             <div className="hidden md:flex justify-between items-center md:ml-auto">
@@ -88,17 +88,15 @@ const Navbar = () => {
                                     user[0]?.displayName && <h1 className='cursor-pointer text-xl font-bold border border-primary md:ml-4 text-primary px-1' onClick={() => navigate(`dashboard/my-profile`)}>{user[0]?.displayName.split(' ')[0]}</h1>
                                 }
                                 {
-                                    user[0] ? <button onClick={handleSignOut} className='md:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium px-5 py-1 rounded-md'>Logout</button> : <button onClick={() => navigate('/login')} className='md:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium  px-5 py-1 rounded-md'>Login</button>
+                                    user[0] ? <button onClick={handleSignOut} className='md:ml-24 md:mt-0 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium px-5 py-1 rounded-md'>Logout</button> : <button onClick={() => navigate('/login')} className='md:ml-24 text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium  px-5 py-1 rounded-md'>Login</button>
                                 }
                             </div>
                         </div>
                         <div className="mr-2 flex md:hidden">
                             {
-                                user[0] ? <button onClick={handleSignOut} className='md:ml-24 text-sm md:hidden block text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms font-medium hover:font-medium px-3 py-1 rounded-md'>Logout</button> : <button onClick={() => navigate('/login')} className='md:ml-24 text-sm md:hidden block text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary hover:border-2 hover:border-primary hover:bg-gradient hover:from-white hover:to-white hover:text-primary transition-all transition-duration:150ms font-medium hover:font-medium px-3 py-1 rounded-md'>Login</button>
+                                user[0]?.displayName && <h1 className='cursor-pointer text-xl font-bold border border-primary pt-1 ml-2 text-primary px-1' onClick={() => navigate(`dashboard/my-profile`)}>{user[0]?.displayName.split(' ')[0]}</h1>
                             }
-                            {
-                                    user[0]?.displayName && <h1 className='cursor-pointer text-xl font-bold border border-primary ml-2 text-primary px-1' onClick={() => navigate(`dashboard/my-profile`)}>{user[0]?.displayName.split(' ')[0]}</h1>
-                            }
+
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
@@ -108,6 +106,7 @@ const Navbar = () => {
                             >
                                 <span className="sr-only">Open main menu</span>
                                 {!isOpen ? (
+
                                     <svg
                                         className="block h-6 w-6"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -140,10 +139,10 @@ const Navbar = () => {
                                         />
                                     </svg>
                                 )}
-                                
-                                  
+
+
                             </button>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -206,6 +205,9 @@ const Navbar = () => {
                                 >
                                     Contact
                                 </CustomLink>
+                                {
+                                    user[0] ? <button onClick={handleSignOut} className='ml-2 text-sm md:hidden block text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium hover:font-medium px-3 py-1 rounded-md'>Logout</button> : <button onClick={() => navigate('/login')} className='md:ml-24 text-sm md:hidden block text-white bg-gradient-to-r from-primary to-secondary border-2 border-secondary font-medium  px-3 py-1 rounded-md'>Login</button>
+                                }
                             </div>
                         </div>
                     )}
